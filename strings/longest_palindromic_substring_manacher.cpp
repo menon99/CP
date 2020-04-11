@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
     in(s)s2 = s2 + "#" + i;
     s2 += "#";
     log2(s2);
-    int right_bound = 0, i = 0, center = 0, max_center = 0, rl, ll;
+    int right_bound = 1, center = 1, max_center = 1, rl, ll;
     vector<int> arr(s2.length(), 0);
     f(1, i, i < s2.length() - 1, 1)
     {
@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
             arr[i] = min(right_bound - i, arr[center * 2 - i]);
         rl = i + arr[i] + 1;
         ll = i - arr[i] - 1;
-        while (s2[ll] == s2[rl] && ll >= 0 && rl < s2.length())
+        while (ll >= 0 && rl < s2.length() && s2[ll] == s2[rl])
         {
             arr[i] += 1;
             ll -= 1;
@@ -55,7 +55,7 @@ int main(int argc, char const *argv[])
     }
     ll = max_center - 1;
     rl = max_center + 1;
-    while (len < arr[max_center])
+    while (len < arr[max_center] && ll >= 0 && rl < s2.length())
     {
         if (s2[ll] != '#')
         {
