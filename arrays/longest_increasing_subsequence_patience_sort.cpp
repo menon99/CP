@@ -15,6 +15,8 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
+    cin.tie(NULL);
+    ios_base::sync_with_stdio(false);
     int n, ele, link;
     cin >> n;
     vector<int> arr(n);
