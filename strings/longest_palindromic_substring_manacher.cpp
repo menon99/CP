@@ -66,5 +66,6 @@ int main(int argc, char const *argv[])
         rl += 1;
     }
     log2(sub);
+    // to count all possible palindromes  count = 0; in(arr) count += (i+1)/2
     return 0;
 }
