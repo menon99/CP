@@ -10,13 +10,30 @@ using namespace std;
 #define getarr(arr, n) f(0, i, i < n, 1) cin >> arr[i];
 #define eb emplace_back
 
+int bsearch(int ele, vector<int> arr)
+{
+    int start = 0, end = arr.size() - 1, mid, index = arr.size();
+    while (start <= end)
+    {
+        mid = (start + end) / 2;
+        if (arr[mid] <= ele)
+            start = mid + 1;
+        else
+        {
+            end = mid - 1;
+            index = mid;
+        }
+    }
+    return index;
+}
+
 int main(int argc, char const *argv[])
 {
     ifstream cin;
     cin.open("input04_lis.txt");
     cin.tie(NULL);
     ios_base::sync_with_stdio(false);
-    int n, ele,ind;
+    int n, ele, ind;
     cin >> n;
     vector<int> arr(n);
     vector<int>::iterator index;
@@ -29,8 +46,8 @@ int main(int argc, char const *argv[])
             lis.eb(arr[i]);
         else
         {
-            index = upper_bound(lis.begin(), lis.end(), arr[i]);
-            ind = index - lis.begin();
+            // index = upper_bound(lis.begin(), lis.end(), arr[i]);
+            ind = bsearch(arr[i], lis); //index - lis.begin();
             if (lis[ind - 1] == arr[i])
                 continue;
             else
