@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -38,9 +39,12 @@ int main(int argc, char const *argv[])
     int n;
     cin >> n;
     vector<int> arr(n);
-    getarr(arr, n);
+    srand(time(0));
+    f(0, i, i < n, 1) arr[i] = rand() % 1000 + 1;
     insertionSort(arr);
     in(arr)log3(i);
     nl;
+    if (is_sorted(arr.begin(), arr.end()))
+        log2("Sorted");
     return 0;
 }
