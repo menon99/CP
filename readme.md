@@ -9,3 +9,7 @@
 - KMP
 - Z algorithm
 - Longest Palindromic substring using Manacher's algorithm
+3. Trees
+- Insertion
+- Deletion
+- InOrder, PreOrder,PostOrder,LevelOrder traversal
