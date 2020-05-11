@@ -1,6 +1,6 @@
 # Compeititive programming
 
-## A repository containing my implementations of popular algorithms used in compeititive programming and interviews
+### A repository containing my implementations of popular algorithms used in compeititive programming and interviews
 
 1. Arrays
 - Longest Bitonic Subarray
@@ -13,3 +13,5 @@
 - Insertion
 - Deletion
 - InOrder, PreOrder,PostOrder,LevelOrder traversal
+4. Backtracking
+- N Queens
