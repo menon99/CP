@@ -37,6 +37,9 @@ struct tree
     int preOrder(node *root);
     int postOrder(node *root);
     int levelOrder(node *root);
+
+    //find
+    node *find(int data);
 };
 
 int tree::insert(int data)
@@ -165,4 +168,24 @@ int tree ::levelOrder(node *root)
             q.push(temp->right);
     }
     return 0;
+}
+
+node *tree::find(int data)
+{
+    node *ptr = NULL, *temp = root;
+    while (true)
+    {
+        if(temp->data == data)
+        {
+            ptr = temp;
+            break;
+        }
+        else if(data > temp->data)
+            temp = temp->right;
+        else
+            temp = temp->left;
+        if(temp==NULL)
+            break;
+    }
+    return ptr;
 }
