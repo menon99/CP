@@ -5,11 +5,14 @@ using namespace std;
 
 node *inOrderSuccessor(tree t1, int data)
 {
+    //successor is searched in the right subtree of the node
+
+    //find node
     node *current = t1.find(data);
     if (current == NULL)
         return NULL;
 
-    //case 1 : current node has right subtree
+    //case 1 : current node has right subtree. Find min in right subtree
     if (current->right != NULL)
     {
         node *temp = current->right;
@@ -18,11 +21,14 @@ node *inOrderSuccessor(tree t1, int data)
         return temp;
     }
 
-    //case 2: current node has no right subtree. so trace back to parent and find deepest ancestor
+    //case 2: current node has no right subtree. So, need to find the deepest parent which is greater than current node.
     else
     {
         node *ancestor = NULL;
         node *temp = t1.root;
+
+        //start from root and check if temp is > data. if true, then temp could be its successor.
+        //Try moving closer to data and update ancestor,by going to temp->left
         while (true)
         {
             if (data < temp->data)
