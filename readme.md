@@ -1,6 +1,6 @@
 # Competitive Programming
 
-## #include"cp.h"
+## #include "cp.h"
 
 ### A repository containing my implementations of popular algorithms used in competitive programming and interviews
 
@@ -21,12 +21,13 @@
 
 - Insertion
 - Deletion
-- InOrder, PreOrder,PostOrder,LevelOrder traversal
+- InOrder, PreOrder, PostOrder, LevelOrder traversal
 - InOrder traversal using stack
 - Search
 - InOrder successor and predecessor
 - Height of tree
 - Sum of nodes
+- Lowest Common Ancestor
 
 #### 4. Backtracking
 
