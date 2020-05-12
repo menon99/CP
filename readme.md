@@ -1,6 +1,8 @@
-# Competitive programming
+# Competitive Programming
 
-### A repository containing my implementations of popular algorithms used in compeititive programming and interviews
+## #include"cp.h"
+
+### A repository containing my implementations of popular algorithms used in competitive programming and interviews
 
 #### 1. Arrays
 
