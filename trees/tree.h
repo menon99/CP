@@ -28,6 +28,7 @@ struct tree
 
     //insertion
     int insert(int data);
+    void insertData();
 
     //deletion
     node *deleteNode(node *root, int data);
@@ -74,6 +75,13 @@ int tree::insert(int data)
         }
     }
     return 1;
+}
+
+void tree::insertData()
+{
+    int arr[] = {15,20,25,27,17,16,10,12,11,8,6};
+    for(int i : arr)
+        insert(i);
 }
 
 node *tree::deleteNode(node *root, int data)
