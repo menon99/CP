@@ -47,21 +47,26 @@ node *inOrderSuccessor(tree t1, int data)
 
 int main(int argc, char const *argv[])
 {
-    int n, data;
-    cin >> n; //number of elements to be inserted
     tree t1;
+    t1.insertData(); // comment this to insert your own data
 
-    for (size_t i = 0; i < n; i++)
+    /* //uncomment this to insert your own data
+    int n,data;
+    cin >> n;
+    for (int i = 0; i < n; i++)
     {
-        cin >> data; //data to be inserted
+        cin >>data;
         t1.insert(data);
     }
-    int tries;
+    */
+   
+    int tries,val;
     cin >> tries; // number of nodes whose successor is to be found
+    
     while (tries)
     {
-        cin >> data; //node whose successor is to be found;
-        node *successor = inOrderSuccessor(t1, data);
+        cin >> val; //node whose successor is to be found;
+        node *successor = inOrderSuccessor(t1, val);
         if (successor != NULL)
             cout << "successor is :" << successor->data << endl;
         else

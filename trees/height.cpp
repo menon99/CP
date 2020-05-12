@@ -13,6 +13,9 @@ int height(node *root, int h)
 int main(int argc, char const *argv[])
 {
     tree t1;
+    t1.insertData(); // comment this to insert your own data
+
+    /* //uncomment this to insert your own data
     int n,data;
     cin >> n;
     for (int i = 0; i < n; i++)
@@ -20,6 +23,8 @@ int main(int argc, char const *argv[])
         cin >>data;
         t1.insert(data);
     }
+    */
+   
     cout << "height of tree is :" << height(t1.root,0) << endl;
     return 0;
 }
