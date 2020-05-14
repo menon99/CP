@@ -26,6 +26,7 @@
 - Search
 - InOrder successor and predecessor
 - Height of tree
+- Diameter of tree
 - Sum of nodes
 - Lowest Common Ancestor
 
