@@ -38,3 +38,5 @@
 
 - 0/1 Knapsack
 - stock price (leetcode problem)
+- Longest common subsequence
+- Longest common substring
