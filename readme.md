@@ -40,3 +40,5 @@
 - stock price (leetcode problem)
 - Longest common subsequence
 - Longest common substring
+- Edit Distance
+- candles (atcoder problem)
