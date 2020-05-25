@@ -9,15 +9,24 @@
 - Longest Bitonic Subarray
 - Longest Increasing Subsequence using Patience Sort
 - Maximum Subarray using Kadane
+- Remove duplicates in sorted array
 
-#### 2. Strings
+#### 2. Sorting
+
+- Bubble sort
+- Selection sort
+- Insertion sort
+- Quicksort
+- Mergesort
+
+#### 3. Strings
 
 - KMP
 - Z algorithm
 - Longest Palindromic substring using Manacher's algorithm
 - Palindrome partitioning using Manacher
 
-#### 3. Trees
+#### 4. Trees
 
 - Insertion
 - Deletion
@@ -30,11 +39,11 @@
 - Sum of nodes
 - Lowest Common Ancestor
 
-#### 4. Backtracking
+#### 5. Backtracking
 
 - N Queens
   
-#### 5. DP
+#### 6. DP
 
 - 0/1 Knapsack
 - stock price (leetcode problem)
@@ -42,3 +51,10 @@
 - Longest common substring
 - Edit Distance
 - candles (atcoder problem)
+
+#### 7. Graph
+
+- Graph insertion
+- BFS
+- DFS
+  
