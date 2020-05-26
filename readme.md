@@ -57,4 +57,7 @@
 - Graph insertion
 - BFS
 - DFS
+- Dijkstra
+- Kruskal
+- Prims
   
