@@ -21,7 +21,7 @@ unordered_map<int, int> prims(graph g1)
     unordered_map<int, int> edges;
     priority_queue<pair<int, int>, vector<pair<int, int>>, compareDistance> min_edges;
     unordered_set<int> visited;
-    int n = g1.getNumNodes(), node;
+    int n = g1.getNumNodes(), node, total = 0;
     for (int i = 1; i <= n; i++)
         visited.insert(i);
     while (!visited.empty())
@@ -44,19 +44,28 @@ unordered_map<int, int> prims(graph g1)
                     {
                         min_edges.push(m);
                         if (edges.find(m.first) == edges.end())
+                        {
                             edges[m.first] = node;
+                            total += m.second;
+                        }
                         else if (g1.getDist(edges[m.first], m.first) > g1.getDist(node, m.first))
+                        {
+                            total -= g1.getDist(edges[m.first],m.first);
+                            total += g1.getDist(node,m.first);
                             edges[m.first] = node;
+                        }
                     }
                 }
             }
         }
     }
+    printf("total cost %d\n", total);
     return edges;
 }
 
 int main(int argc, char const *argv[])
 {
+    //graph g1 = getGraph();
     graph g1(6);
     g1.insert(1, {{2, 3}, {4, 1}});
     g1.insert(2, {{1, 3}, {4, 3}, {3, 1}});
