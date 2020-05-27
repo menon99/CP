@@ -20,27 +20,27 @@ unordered_map<int, int> prims(graph g1)
 {
     unordered_map<int, int> edges;
     priority_queue<pair<int, int>, vector<pair<int, int>>, compareDistance> min_edges;
-    unordered_set<int> visited;
+    unordered_set<int> not_visited;
     int n = g1.getNumNodes(), node, total = 0;
     for (int i = 1; i <= n; i++)
-        visited.insert(i);
-    while (!visited.empty())
+        not_visited.insert(i);
+    while (!not_visited.empty())
     {
-        for (int i : visited)
+        for (int i : not_visited)
         {
             min_edges.push({i, 0});
             break;
         }
-        while (!min_edges.empty() && !visited.empty())
+        while (!min_edges.empty() && !not_visited.empty())
         {
             node = min_edges.top().first;
             min_edges.pop();
-            if (visited.find(node) != visited.end())
+            if (not_visited.find(node) != not_visited.end())
             {
-                visited.erase(node);
+                not_visited.erase(node);
                 for (auto m : g1.getEdges(node))
                 {
-                    if (visited.find(m.first) != visited.end())
+                    if (not_visited.find(m.first) != not_visited.end())
                     {
                         min_edges.push(m);
                         if (edges.find(m.first) == edges.end())
