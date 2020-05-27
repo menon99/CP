@@ -61,4 +61,5 @@
 - Kruskal
 - Prims
 - Topological sort
+- Khan's algorithm for topological sort
   
