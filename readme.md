@@ -60,4 +60,5 @@
 - Dijkstra
 - Kruskal
 - Prims
+- Topological sort
   
