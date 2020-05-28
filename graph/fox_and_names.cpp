@@ -1,10 +1,9 @@
 //https://codeforces.com/problemset/problem/510/C
 
-//kahn's topological sort to find lexographical relation between strings
+//kahn's topological sort to find lexicographical relation between strings
 
 #include <iostream>
 #include <vector>
-#include <unordered_map>
 #include <unordered_set>
 #include <stack>
 
@@ -47,7 +46,7 @@ public:
     }
 };
 
-string getOrder(graph g1)
+string getOrder(graph &g1)
 {
     string order = "";
 
