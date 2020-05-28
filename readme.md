@@ -61,5 +61,6 @@
 - Kruskal
 - Prims
 - Topological sort
-- Khan's algorithm for topological sort
+- Kahn's algorithm for topological sort
+- Fox and Names codeforces 510/C using Kahn's algorithm
   
