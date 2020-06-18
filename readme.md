@@ -38,6 +38,7 @@
 - Diameter of tree
 - Sum of nodes
 - Lowest Common Ancestor
+- Segment Tree
 
 #### 5. Backtracking
 
