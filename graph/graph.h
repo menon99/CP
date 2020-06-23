@@ -54,6 +54,21 @@ public:
         return true;
     }
 
+    void addUndirectedEdge(int v1, int v2)
+    {
+        g1[v1][v2] = 0;
+        g1[v2][v1] = 0;
+    }
+
+    void addUndirected(int v1,vector<int> l)
+    {
+        for(int i : l)
+        {
+            g1[v1][i] = 0;
+            g1[i][v1] = 0;
+        }
+    }
+
     //breadth first search traversal
     void bfs(int start)
     {
