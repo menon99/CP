@@ -64,4 +64,5 @@
 - Topological sort
 - Kahn's algorithm for topological sort
 - Fox and Names codeforces 510/C using Kahn's algorithm
+- Tarjan's algorithm for bridges and articulation points
   
