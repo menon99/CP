@@ -38,7 +38,6 @@
 - Diameter of tree
 - Sum of nodes
 - Lowest Common Ancestor
-- Segment Tree
 
 #### 5. Backtracking
 
@@ -66,4 +65,8 @@
 - Fox and Names codeforces 510/C using Kahn's algorithm
 - Tarjan's algorithm for bridges and articulation points
 - Ford-Fulkerson Edmond's-Karp Max Flow algorithm
+
+#### 8. Advanced DS
+- Segment Tree
+- Trie
   
