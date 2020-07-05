@@ -20,14 +20,28 @@ bool Union(Node *p1, Node *p2)
 {
     if (p1 == p2)
         return false;
-    p2->parent = p1;
-    p1->children.push_back(p2);
-    for (auto p : p2->children)
+    if (p1->children.size() >= p2->children.size())
     {
-        p->parent = p1;
-        p1->children.push_back(p);
+        p2->parent = p1;
+        p1->children.push_back(p2);
+        for (auto p : p2->children)
+        {
+            p->parent = p1;
+            p1->children.push_back(p);
+        }
+        p2->children.clear();
     }
-    p2->children.clear();
+    else
+    {
+        p1->parent = p2;
+        p2->children.push_back(p1);
+        for(auto p : p1->children)
+        {
+            p->parent = p2;
+            p2->children.push_back(p);
+        }
+        p1->children.clear();
+    }
     return true;
 }
 
@@ -59,9 +73,9 @@ public:
     }
 };
 
-vector<pair<int,int>> kruskal(graph &g1)
+vector<pair<int, int>> kruskal(graph &g1)
 {
-    vector<pair<int,int>> edges ;
+    vector<pair<int, int>> edges;
     int total = 0;
     priority_queue<Edge, vector<Edge>, compareDist> min_edges;
     int t_sets = g1.getNumNodes();
@@ -79,13 +93,13 @@ vector<pair<int,int>> kruskal(graph &g1)
         n2 = min_edges.top().node2;
         if (Union(find(nodes[n1]), find(nodes[n2])))
         {
-            edges.push_back({n2,n1});
+            edges.push_back({n2, n1});
             total += min_edges.top().dist;
             t_sets -= 1;
         }
         min_edges.pop();
     }
-    printf("total cost is %d\n",total);
+    printf("total cost is %d\n", total);
     return edges;
 }
 
@@ -99,7 +113,7 @@ int main(int argc, char const *argv[])
     g1.insert(4, {{1, 1}, {2, 3}, {5, 6}, {3, 1}});
     g1.insert(5, {{4, 6}, {6, 2}, {3, 5}});
     g1.insert(6, {{5, 2}, {3, 4}});
-    vector<pair<int,int>> edges = kruskal(g1);
+    vector<pair<int, int>> edges = kruskal(g1);
     for (auto m : edges)
         printf("edge from %d to % d\n", m.second, m.first);
     return 0;
