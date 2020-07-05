@@ -25,6 +25,8 @@
 - Z algorithm
 - Longest Palindromic substring using Manacher's algorithm
 - Palindrome partitioning using Manacher
+- Count character occurrences in sorted string
+- Remove K consecutive same characters
 
 #### 4. Trees
 
@@ -67,6 +69,14 @@
 - Ford-Fulkerson Edmond's-Karp Max Flow algorithm
 
 #### 8. Advanced DS
+
 - Segment Tree
 - Trie
+  
+#### 9. Bit Manipulation
+
+- hack1: basic stuff
+- hack2: K'th bit
+- hack3: rightmost set bit
+- hack4: letters
   
